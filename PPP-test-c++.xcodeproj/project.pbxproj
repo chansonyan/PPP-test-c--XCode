@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8749A42B2AE8A94C006AA17F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8749A42A2AE8A94C006AA17F /* main.cpp */; };
+		87E142612AF07FDF001C9398 /* fltk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E142602AF07FDF001C9398 /* fltk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		8749A4272AE8A94C006AA17F /* PPP-test-c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PPP-test-c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8749A42A2AE8A94C006AA17F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		87E142602AF07FDF001C9398 /* fltk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fltk.framework; path = ../../../../../../../Library/Frameworks/fltk.framework; sourceTree = "<group>"; };
+		87E142622AF0A0F8001C9398 /* std_lib_facilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = std_lib_facilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E142612AF07FDF001C9398 /* fltk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +47,7 @@
 			children = (
 				8749A4292AE8A94C006AA17F /* PPP-test-c++ */,
 				8749A4282AE8A94C006AA17F /* Products */,
+				87E1425F2AF07FDF001C9398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +63,17 @@
 			isa = PBXGroup;
 			children = (
 				8749A42A2AE8A94C006AA17F /* main.cpp */,
+				87E142622AF0A0F8001C9398 /* std_lib_facilities.h */,
 			);
 			path = "PPP-test-c++";
+			sourceTree = "<group>";
+		};
+		87E1425F2AF07FDF001C9398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87E142602AF07FDF001C9398 /* fltk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +190,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = " /Library/Frameworks/fltk.framework/Headers";
+				LIBRARY_SEARCH_PATHS = " /Library/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -228,10 +245,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = " /Library/Frameworks/fltk.framework/Headers";
+				LIBRARY_SEARCH_PATHS = " /Library/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -239,6 +259,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +271,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

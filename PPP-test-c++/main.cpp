@@ -5,10 +5,13 @@
 //  Created by Cyan on 2023/10/25.
 //
 
-#include <iostream>
+// This program outputs the message “Hello, World!” to the monitor
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include "std_lib_facilities.h"
+
+int main() // C++ programs start by executing the function main
+{
+    cout << "Hello, World!\n"; // output “Hello, World!”
     return 0;
+
 }
